@@ -1,0 +1,57 @@
+<div [@routerTransition]>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="list-group">
+      <a *ngFor="let device of iotDevices | async; let i=index" [class.active]="active === i" (click)="select(i)" class="list-group-item">
+        <h4 class="list-group-item-heading list-item">{{device.name}}</h4>
+        <p class="list-group-item-text list-item">Producent: {{device.manufacturer}}</p>
+        <p class="list-group-item-text list-item">Model: {{device.model}}</p>
+        <p class="list-group-item-text list-item">Numer seryjny: {{device.serialNumber}}</p>
+        <p class="list-group-item-text list-item">Wersja: {{device.version}}</p>
+        <p class="list-group-item-text list-item">Typ: {{device.type}}</p>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>Informacje o obiekcie</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="list-group-item-heading list-item"> {{ (selectedDevice | async)?.name }}</h4>
+            <p class="list-group-item-text list-item">Producent: {{ (selectedDevice | async)?.manufacturer }}</p>
+            <p class="list-group-item-text list-item">Model: {{ (selectedDevice | async)?.model }}</p>
+            <p class="list-group-item-text list-item">Numer seryjny: {{ (selectedDevice | async)?.serialNumber }}</p>
+            <p class="list-group-item-text list-item">Wersja: {{ (selectedDevice | async)?.version }}</p>
+            <p class="list-group-item-text list-item">Dodatkowe informacje: </p>
+            <pre>
+            {{ (selectedDevice | async)?.description }} </pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" style="height: inherit">
+        <div class="card">
+          <div class="card-header">
+            <h3>Ostatnie położenie</h3>
+          </div>
+          <div class="card-body">
+            <svg class="svg-map" width="inherit" height="600px">
+              <image style="width: inherit" xlink:href="../assets/map.jpg"></image>
+              <g class="device" fill="red">
+                <image [attr.href]='"../assets/types/pointer.png"' height="40px" [attr.x]="(selectedDevice | async)?.posX"
+                       [attr.y]="(selectedDevice | async)?.posY"></image>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

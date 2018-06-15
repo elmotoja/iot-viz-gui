@@ -1,0 +1,30 @@
+<div [@routerTransition]>
+  <div class="row">
+    <div class="col col-sm-6">
+      <div class="card mb-3">
+        <div class="card-header">
+          Wykryte urządzenia IoT
+        </div>
+        <div class="card-body">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+
+      </div>
+    </div>
+    <div class="col col-sm-6">
+      <div class="card mb-3">
+        <div class="card-header">
+          Rodzaje urządzeń
+        </div>
+        <div class="card-body">
+          <canvas baseChart height="180px" [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                  [chartType]="doughnutChartType"
+                  (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>

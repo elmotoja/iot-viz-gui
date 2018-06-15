@@ -1,0 +1,13 @@
+.list-group {
+  overflow-y: scroll;
+  height: stretch;
+  direction: rtl;
+}
+
+.list-group .active{
+  background-color: #f5f5f5;
+  border-color: gray;
+}
+.img-map {
+  height: stretch;
+}

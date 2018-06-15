@@ -1,0 +1,132 @@
+{
+  "iot-devices": [
+    {
+      "deviceId": "1111",
+      "name": "LG G6",
+      "type": "phone",
+      "serialNumber": "1234-zxcv-5678",
+      "model": "G6",
+      "posX": 300,
+      "posY": 420,
+      "status": "ok",
+      "manufacturer": "LG",
+      "description": "\nMobile device, \nBT 4.0"
+    },
+    {
+      "deviceId": "2222",
+      "name": "LG Cook",
+      "type": "robot",
+      "serialNumber": "321313sdad78",
+      "model": "Cook",
+      "posX": 534,
+      "posY": 395,
+      "status": "ok",
+      "manufacturer": "LG",
+      "description": "\nCooking Robot, \nBT 3.0"
+    },
+    {
+      "deviceId": "3333",
+      "name": "Time Machine",
+      "serialNumber": "qqwertazerty",
+      "model": "v.23.4124",
+      "posX": 782,
+      "posY": 598,
+      "status": "ok",
+      "type": "robot",
+      "manufacturer": "Timexpress",
+      "description": "\nJust normal time machine \nnothing special"
+    }
+  ,
+    {
+      "deviceId": "4444",
+      "name": "Time Machine 2",
+      "serialNumber": "qqwertazerty",
+      "model": "v.23.4124",
+      "posX": 742,
+      "posY": 398,
+      "status": "danger",
+      "type": "lamp",
+      "manufacturer": "Timexpress",
+      "description": "\nJust normal time machine \nnothing special"
+    }
+  ],
+  "iot-devices-history": [
+    {
+      "deviceId": "1111",
+      "name": "LG G6",
+      "type": "phone",
+      "serialNumber": "1234-zxcv-5678",
+      "model": "G6",
+      "posX": 340,
+      "posY": 420,
+      "version": 1,
+      "status": "danger",
+      "manufacturer": "LG",
+      "description": "\nMobile device, \nBT 4.0"
+    },
+    {
+      "deviceId": "1111",
+      "name": "LG G6",
+      "type": "phone",
+      "serialNumber": "1234-zxcv-5678",
+      "model": "G6",
+      "posX": 320,
+      "posY": 420,
+      "version": 2,
+      "status": "ok",
+      "manufacturer": "LG",
+      "description": "\nMobile device, \nBT 4.0"
+    },
+    {
+      "deviceId": "1111",
+      "name": "LG G6",
+      "type": "lamp",
+      "serialNumber": "1234-zxcv-5678",
+      "model": "G6",
+      "posX": 300,
+      "posY": 410,
+      "version": 3,
+      "status": "ok",
+      "manufacturer": "LG",
+      "description": "\nMobile device, \nBT 4.0"
+    },
+    {
+      "deviceId": "2222",
+      "name": "LG Cook",
+      "type": "robot",
+      "serialNumber": "321313sdad78",
+      "model": "Cook",
+      "posX": 434,
+      "posY": 395,
+      "version": 1,
+      "status": "warning",
+      "manufacturer": "LG",
+      "description": "\nCooking Robot, \nBT 3.0"
+    },
+    {
+      "deviceId": "2222",
+      "name": "LG Cook",
+      "type": "robot",
+      "serialNumber": "321313sdad78",
+      "model": "Cook",
+      "posX": 534,
+      "posY": 295,
+      "version": 2,
+      "status": "warning",
+      "manufacturer": "LG",
+      "description": "\nCooking Robot, \nBT 3.0"
+    },
+    {
+      "deviceId": "3333",
+      "name": "Time Machine",
+      "serialNumber": "qqwertazerty",
+      "model": "v.23.4124",
+      "posX": 534,
+      "posY": 335,
+      "version": 1,
+      "status": "danger",
+      "manufacturer": "Timexpress",
+      "description": "\nJust normal time machine\nnothing special"
+    }
+    ]
+}

@@ -1,0 +1,38 @@
+<div [@routerTransition]>
+
+<div *ngFor="let alert of alerts">
+  <div class="alert alert-{{alert.type}}" role="alert">
+    Urządzenie o numerze seryjnym: {{ alert.device }} działa nieprawidłowo. Powód: {{ alert.message }}
+    <button type="button" (click)="closeAlert(alert)" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-9">
+
+    <svg class="svg-map" width="1200px" height="900px">
+      <image width="1200px" height="900px" xlink:href="../assets/map.jpg"></image>
+      <g class="device" *ngFor="let device of iotDevices | async">
+        <image [attr.href]='"../assets/types/"+device.type+".png"' height="40px" [attr.x]="device.posX"
+               [attr.y]="device.posY"></image>
+        <text style="font-weight: bold" [attr.fill]="changeColor(device.status)" [attr.x]="device.posX" [attr.y]="device.posY + 60">{{device.name}}</text>
+      </g>
+    </svg>
+
+  </div>
+  <div class="col-md-3">
+    <div class="list-group">
+      <input type="text" id="searchInput" value="" (keyup)="filterDevicesList($event)" placeholder="Szukaj urządzeń...">
+
+      <a *ngFor="let device of iotDevices | async" class="list-group-item">
+        <h4 class="list-group-item-heading list-item">{{device.name}}</h4>
+        <p class="list-group-item-text list-item">Producent: {{device.manufacturer}}</p>
+        <p class="list-group-item-text list-item">Model: {{device.model}}</p>
+        <p class="list-group-item-text list-item">Numer seryjny: {{device.serialNumber}}</p>
+        <p class="list-group-item-text list-item">Opis: {{device.description}}</p>
+      </a>
+    </div>
+  </div>
+</div>
